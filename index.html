@@ -11,16 +11,12 @@
     <title>Bootstrap Multipurpose Template - Tridenta</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <!-- MAIN STYLE SECTION-->
-    <script src="https://use.fontawesome.com/f33e0cc488.js"></script>
     <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" media="screen" />
     <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
     <link href="assets/plugins/IconHoverEffects-master/css/component.css" rel="stylesheet" />
     <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/about-achivements.css" rel="stylesheet" />
     <link id="mainStyle" href="assets/css/style.css" rel="stylesheet" />
-    <link  href="./demo.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <!-- END MAIN STYLE SECTION-->
 </head>
@@ -28,18 +24,23 @@
 
      <!-- BODY SECTION-->
 <body>
-
-    <script id="oc-start-up"
-            data-oc-service="020ad059-dd88-48c6-b7bf-bad2c5189134-230-278A91AF3243B421DA2132FFED679E9227CFD463"
-            data-oc-language="fi_FI"
-            data-oc-skip-presurvey="true"
-            data-oc-fullscreen-mode="false"
-            data-main="https://octest.elisa.fi/chattest/Scripts/oc-chat-dev.js"
-            src="https://octest.elisa.fi/chattest/Scripts/require.js"></script>
-
     <!--PAGE CONTENT--> 
     <!-- HOMEPAGE SECTION-->  
+    <script>
+        function openChat() {
+            var script = document.createElement('script');
+            script.setAttribute('id', "oc-start-up");
+            script.setAttribute('src', 'https://occhat.elisa.fi/chatstage/Scripts/require.js');
 
+            script.setAttribute('data-oc-service', '39293143-f98b-47bc-8035-07d014d9ba63-100-1CF8B4B5F8588A78E7069649961E4A8DD4D9B4AB');
+            script.setAttribute('data-oc-language', 'fi_FI');
+            script.setAttribute('data-main', 'https://occhat.elisa.fi/chatstage/Scripts/oc-chat-dev.js');
+            script.setAttribute('data-oc-skip-presurvey', 'true');
+            script.setAttribute('data-oc-fullscreen-mode', 'false');
+
+            document.body.appendChild(script);
+        };
+    </script>
     <section id="Homepage">
         
         <div class="container">
@@ -56,7 +57,6 @@
             </div>
             <div class="row">
                 <div data-scrollreveal="enter from the left 500px" class="col-md-6 col-md-offset-3">
-
                     <div class="align-center">
                         <div class="col-md-12 align-center">
                             <div class="hi-icon-effect-9 hi-icon-effect-9a">
@@ -205,6 +205,7 @@
                             <ul class="social-network social-circle">
                                 <li><a href="tel:0102271860" class="icoRss"><i class="fa fa-phone"></i></a></li>
                                 <li><a href="https://ocsaas.elisa.fi/video/#/new/37fea5b33682452bbcd155221ec3ec6c" class="icoRss"><i class="fa fa-video-camera"></i></a></li>
+                                <li><a href="javascript:openChat()" class="icoRss"><i class="fa fa-comments-o"></i></a></li>
                             </ul>
                             <br/>
                             <br/>
@@ -227,5 +228,14 @@
 		<span id="theme_red" style="background-color:#E7484E" ></span>
      </div>
 </div>
+    <script id="oc-start-up"
+            data-oc-service="020ad059-dd88-48c6-b7bf-bad2c5189134-230-278A91AF3243B421DA2132FFED679E9227CFD463"
+            data-oc-language="fi_FI"
+            data-oc-skip-presurvey="true"
+            data-oc-fullscreen-mode="false"
+            data-main="https://octest.elisa.fi/chattest/Scripts/oc-chat-dev.js"
+            src="https://octest.elisa.fi/chattest/Scripts/require.js"></script>
+
+</body>
     <!--END  BODY SECTION-->
 </html>
